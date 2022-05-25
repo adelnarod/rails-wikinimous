@@ -1,0 +1,14 @@
+
+<h1>Articles List</h1>
+
+<div class="list center">
+  <ol class="list-group list-group-flush">
+    <% @articles.each do |article| %>
+      <li class="list-group-item">
+        <%= link_to article.title, article_path(article) %>
+      </li>
+    <% end %>
+  </ol>
+</div>
+
+  <%= link_to 'Create Article', new_article_path %>
